@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+VERSION="0.1.0"
+
+usage() {
+  echo "usage: mytools --version" >&2
+}
+
+if [[ $# -eq 1 && $1 == "--version" ]]; then
+  echo "mytools $VERSION"
+  exit 0
+fi
+
+usage
+exit 2
